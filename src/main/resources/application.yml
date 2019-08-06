@@ -1,0 +1,9 @@
+server:
+  port: 2020
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp  
+      
+
