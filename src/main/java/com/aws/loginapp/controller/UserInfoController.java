@@ -1,8 +1,6 @@
 package com.aws.loginapp.controller;
 
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,13 +29,11 @@ public class UserInfoController {
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public String userLogin(Model model) {
 		LOGGER.info("Enters in to UserLogin Page");
-		LOGGER.info("From Logger Enters in to UserLogin Page");
+		LOGGER.info("From Logger Enters in to UserLogin Page1");
 		model.addAttribute("userForm", new User());
 		return "user-login";
 
 	}
-
-	
 	
 	@RequestMapping(value = "/userregister", method = RequestMethod.POST)
 	public ModelAndView loginDetails(@ModelAttribute("userForm") User userForm) {
