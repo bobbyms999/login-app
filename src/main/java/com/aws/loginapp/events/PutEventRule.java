@@ -14,13 +14,13 @@ public class PutEventRule {
 		CloudWatchEventsClient cwe = CloudWatchEventsClient.builder().build();
 
 		//Step-1(Creating a rule for event)
-		PutRuleRequest request = PutRuleRequest.builder().name(rule_name).roleArn(role_arn)
+		PutRuleRequest request = PutRuleRequest.builder().name(rule_name)/*.roleArn(role_arn)*/
 				.scheduleExpression("rate(5 minutes)").state(RuleState.ENABLED).build();
 
 		PutRuleResponse response = cwe.putRule(request);
 
 		//Step-2(Creating a target for a event)
-		Target target = Target.builder().arn(function_arn).id(target_id).build();
+		Target target = Target.builder().arn(function_arn).id("lambda-test").build();
 
 		PutTargetsRequest targetsrequest = PutTargetsRequest.builder().targets(target).rule(rule_name).build();
 
