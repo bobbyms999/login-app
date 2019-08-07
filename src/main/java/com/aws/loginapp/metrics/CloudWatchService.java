@@ -25,7 +25,7 @@ public class CloudWatchService {
     /**
      * Defaults to us-west-2
      */
-    @Value("${aws.cloudwatch.region: us-west-2}")
+    @Value("${aws.cloudwatch.region: us-east-2}")
     private String awsRegion;
 
     public void publish(String nameSpace,String metricName,StandardUnit unit,String dimensionName,String dimensionValue,double dataPoint){
@@ -49,6 +49,9 @@ public class CloudWatchService {
                 .withCredentials(awsCredentialsProvider)
                 .withRegion(awsRegion)
                 .build().putMetricData(request);
+        
+        
+        System.out.println("Response Generated..."+response);
     }
 
 }
