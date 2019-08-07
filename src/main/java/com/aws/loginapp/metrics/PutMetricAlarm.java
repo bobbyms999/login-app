@@ -26,7 +26,7 @@ public class PutMetricAlarm {
 		PutMetricAlarmRequest request = PutMetricAlarmRequest.builder().alarmName(alarmName)
 				.comparisonOperator(ComparisonOperator.GREATER_THAN_THRESHOLD).evaluationPeriods(1)
 				.metricName("CPUUtilization").namespace("AWS/EC2").period(60).statistic(Statistic.AVERAGE)
-				.threshold(70.0).actionsEnabled(false).alarmDescription("Alarm when server CPU utilization exceeds 70%")
+				.threshold(70.0).actionsEnabled(true).alarmActions("arn:aws:sns:us-east-2:050077062646:Error").alarmDescription("Alarm when server CPU utilization exceeds 70%")
 				.unit(StandardUnit.SECONDS).dimensions(dimension).build();
 
 		PutMetricAlarmResponse response = cw.putMetricAlarm(request);

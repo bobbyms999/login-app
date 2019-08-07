@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.aws.loginapp.events.CreateAWSEvent;
 import com.aws.loginapp.events.PutEventRule;
+import com.aws.loginapp.metrics.PutMetricAlarm;
 
 @SpringBootApplication
 public class LoginAppApplication {
@@ -19,15 +20,15 @@ public class LoginAppApplication {
 	
 	public String test()
 	{
-		/*PutMetricAlarm alaram=new PutMetricAlarm();
-        alaram.createAlaramForMetric();*/
+		PutMetricAlarm alaram=new PutMetricAlarm();
+        alaram.createAlaramForMetric();
         
-        CreateAWSEvent event=new CreateAWSEvent();
+      /*  CreateAWSEvent event=new CreateAWSEvent();
         event.createAEvent("Sample_Test");
        
         PutEventRule rule= new PutEventRule();
         rule.createRuleAndTargetForEvent("Service_Checking_Event", "arn:aws:events::rule", "arn:aws:lambda:us-east-2:050077062646:function:lambda-test", "Error");
-		return "Success";
+		*/return "Success";
 	}
 	
 }
