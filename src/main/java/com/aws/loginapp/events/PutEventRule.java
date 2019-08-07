@@ -15,7 +15,7 @@ public class PutEventRule {
 
 		//Step-1(Creating a rule for event)
 		PutRuleRequest request = PutRuleRequest.builder().name(rule_name)/*.roleArn(role_arn)*/
-				.scheduleExpression("rate(5 minutes)").state(RuleState.ENABLED).build();
+				.scheduleExpression("rate(5 minutes)").description("Checking the service in other instance by lamda function").state(RuleState.ENABLED).build();
 
 		PutRuleResponse response = cwe.putRule(request);
 
