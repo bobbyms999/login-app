@@ -26,7 +26,7 @@ public class LoginAppApplication {
         event.createAEvent("Sample_Test");
        
         PutEventRule rule= new PutEventRule();
-        rule.createRuleAndTargetForEvent("Sample", "arn:aws:events::rule", "arn:aws:lambda:us-east-2:050077062646:function:lambda-test", "Error");
+        rule.createRuleAndTargetForEvent("Service_Checking_Event", "arn:aws:events::rule", "arn:aws:lambda:us-east-2:050077062646:function:lambda-test", "Error");
 		return "Success";
 	}
 	
