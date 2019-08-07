@@ -30,7 +30,6 @@ public class UserInfoController {
 	
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public String userLogin(Model model) {
-		LOGGER.info("Enters in to UserLogin Page");
 		LOGGER.info("From Logger Enters in to UserLogin Page");
 		model.addAttribute("userForm", new User());
 		return "user-login";
