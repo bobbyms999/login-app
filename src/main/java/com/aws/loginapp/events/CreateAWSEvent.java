@@ -14,7 +14,7 @@ public class CreateAWSEvent {
 		final String EVENT_DETAILS = "{ \"key1\": \"value1\", \"key2\": \"value2\" }";
 
 		PutEventsRequestEntry request_entry = PutEventsRequestEntry.builder().detail(EVENT_DETAILS)
-				.detailType("Scheduled Event").resources(resource_arn).source("aws-sdk-java-cloudwatch-example")
+				.detailType("Scheduled Event").resources(resource_arn).source("aws.events")
 				.build();
 
 		PutEventsRequest request = PutEventsRequest.builder().entries(request_entry).build();
