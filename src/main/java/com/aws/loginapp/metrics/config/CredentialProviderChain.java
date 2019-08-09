@@ -5,7 +5,7 @@ import com.amazonaws.auth.*;
 
 
 public class CredentialProviderChain extends AWSCredentialsProviderChain{
-    CredentialProviderChain() {
+    public CredentialProviderChain() {
         super(new SysProps());
     }
 }
