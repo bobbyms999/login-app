@@ -20,11 +20,11 @@ public class LoginAppApplication {
 	
 	public String test()
 	{
-		PutMetricAlarm alaram=new PutMetricAlarm();
+		/*PutMetricAlarm alaram=new PutMetricAlarm();
         alaram.createAlaramForMetric();
         
-      /*  CreateAWSEvent event=new CreateAWSEvent();
-        event.createAEvent("Sample_Test");
+       CreateAWSEvent event=new CreateAWSEvent();
+        event.createAEvent("Service_Checking_Event");
        
         PutEventRule rule= new PutEventRule();
         rule.createRuleAndTargetForEvent("Service_Checking_Event", "arn:aws:events::rule", "arn:aws:lambda:us-east-2:050077062646:function:lambda-test", "Error");

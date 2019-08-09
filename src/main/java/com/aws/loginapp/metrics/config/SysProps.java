@@ -1,17 +1,14 @@
 package com.aws.loginapp.metrics.config;
 
-import org.springframework.beans.factory.annotation.Value;
-
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.auth.SystemPropertiesCredentialsProvider;
-import com.amazonaws.regions.AwsSystemPropertyRegionProvider;
 
 public class SysProps extends SystemPropertiesCredentialsProvider {
 
-	private String accessKey = "AKIAQXKGTKX3IQPY6QRX";
+	private String accessKey = "AKIAQXKGTKX3GYSXCH4R";
 
-	private String secretKey = "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";
+	private String secretKey = "6IisO4pmY1AHIE0M2plsCMnC3uexnwzAG2zcWlK/";
 
 	@Override
 	public AWSCredentials getCredentials() {

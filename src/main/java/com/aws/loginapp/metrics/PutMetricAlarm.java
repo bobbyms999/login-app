@@ -17,8 +17,8 @@ public class PutMetricAlarm {
 
 	
 	public PutMetricAlarmResponse createAlaramForMetric() {
-		String alarmName="Test"; 
-		String instanceId="i-0141d8a7c37a71cad";
+		String alarmName="ServerHealth"; 
+		String instanceId="i-07c4cfcad02827750";
 		CloudWatchClient cw = CloudWatchClient.builder().build();
 
 		Dimension dimension = Dimension.builder().name("InstanceId").value(instanceId).build();
